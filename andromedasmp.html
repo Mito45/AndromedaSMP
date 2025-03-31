@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AndromedaSMP</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: white;
+            text-align: center;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+        }
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #00d4ff;
+        }
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        blockquote {
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-left: 5px solid #00d4ff;
+            margin: 20px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>AndromedaSMP</h1>
+    <div class="menu">
+        <a href="#" onclick="showContent('home')">Início</a>
+        <a href="#" onclick="showContent('sobre')">Sobre</a>
+        <a href="#" onclick="showContent('contato')">Contato</a>
+    </div>
+    <div class="content" id="content">
+        <p>Bem-vindo ao AndromedaSMP! Escolha uma aba acima.</p>
+    </div>
+    <script>
+        function showContent(page) {
+            const content = document.getElementById("content");
+            if (page === "home") {
+                content.innerHTML = `<h2># Andromeda SMP - ASMP! #</h2>
+                    <p><strong>🌌 Lore!</strong></p>
+                    <blockquote>
+                        <p><strong>Ano: 2500</strong></p>
+                        <p>A Terra está à beira do colapso. Poluição, guerras e catástrofes naturais devastaram o planeta, tornando-o quase inabitável. A humanidade, desesperada, busca uma saída.</p>
+                        <p>Dr. Jeremias, o homem mais inteligente do mundo, propõe um plano audacioso: enviar uma tripulação para um planeta recém-descoberto, KOI-5715-01, na esperança de encontrar recursos para salvar a Terra ou, quem sabe, um novo lar para a humanidade. O governo mundial aceita o plano sem hesitação.</p>
+                        <p>A nave Érebo parte com uma equipe de exploradores altamente treinada. No entanto, há algo que a tripulação não sabe: KOI-5715-01 não é um planeta vazio. Ele abriga seres humanoides, inteligentes e antigos, que vivem em sintonia com um mineral misterioso—uma substância que alimenta a própria essência do planeta e concede habilidades mágicas aos seus habitantes.</p>
+                        <p>O destino da humanidade pode estar em KOI-5715-01… Mas a que custo?</p>
+                    </blockquote>`;
+            } else if (page === "sobre") {
+                content.innerHTML = `<p><strong>🧢 Vagas Abertas!</strong></p>
+                    <p>Atualmente estamos com 40 vagas de players sendo assim 4 Levas de player's</p>
+                    <p><strong>❗ Info:</strong></p>
+                    <ul>
+                        <li>Host paga</li>
+                        <li>2 Mods próprios</li>
+                        <li>Tab customizado</li>
+                    </ul>`;
+            } else if (page === "contato") {
+                content.innerHTML = `<p><a href='https://discord.gg/WKvTvnNfqr' target='_blank'>Discord do servidor!</a></p>`;
+            }
+        }
+    </script>
+</body>
+</html>
